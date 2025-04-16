@@ -7,10 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-<<<<<<< HEAD
 
-=======
->>>>>>> 3d36c8dd6d95081f32cf5940be964aae8920f48e
 
 @Data
 @AllArgsConstructor

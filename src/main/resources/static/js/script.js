@@ -22,7 +22,15 @@ function carregarTarefas() {
     type: 'GET',
     success: function (tarefas) {
       let lista = '';
-      tarefas.forEach(tarefa => {
+      // novo código para pesquisa
+      const pesquisa = $('#pesquisaTarefa').val()?.toLowerCase() || '';
+
+      const tarefasFiltradas = tarefas.filter(tarefa =>
+        tarefa.nome.toLowerCase().includes(pesquisa)
+      );
+      // fim do novo código
+      //  tarefas.forEach foi alterado para tarefasFiltradas.forEach
+      tarefasFiltradas.forEach(tarefa => {
         lista += `
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div>
@@ -36,6 +44,7 @@ function carregarTarefas() {
             </li>`;
 
       });
+
       $('#listaTarefas').html(lista);
     }
   });
@@ -88,7 +97,6 @@ function atualizarTarefa() {
     }
   });
 }
-x
 
 
 // Carrega a lista ao iniciar a página

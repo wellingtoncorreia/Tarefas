@@ -33,7 +33,16 @@
 
     <!-- Lista de tarefas -->
     <div class="card">
-      <div class="card-header bg-dark text-white">Lista de Tarefas</div>
+      <!-- Código acrescentado d-flex justify-content-between align-items-center -->
+      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        Lista de Tarefas
+        <!-- Barra de Pesquisa -->
+        <div>
+          <input type="text" id="pesquisaTarefa" class="form-control" placeholder="Pesquisar tarefa..."
+            onkeyup="filtroTarefa()">
+        </div>
+        <!-- fim barra de pesquisa -->
+      </div>
       <ul class="list-group list-group-flush" id="listaTarefas">
         <!-- Tarefas serão adicionadas aqui -->
       </ul>
